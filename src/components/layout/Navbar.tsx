@@ -63,12 +63,14 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/contact"
+            <a
+              href="https://terraseptsolutions.com/portal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white transition-colors"
             >
               Sign In
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="relative px-5 py-2.5 rounded-xl text-sm font-semibold text-white overflow-hidden group"
@@ -112,13 +114,14 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-4 grid grid-cols-2 gap-3">
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
+            <a
+              href="https://terraseptsolutions.com/portal"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-center px-4 py-2.5 rounded-xl text-sm font-medium border border-slate-700 text-slate-300 hover:border-brand-500/50 transition-all"
             >
               Sign In
-            </Link>
+            </a>
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
