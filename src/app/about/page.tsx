@@ -17,10 +17,9 @@ const values = [
 ]
 
 const team = [
-  { name: 'Dr. Amina Hassan', role: 'CEO & Co-Founder', bg: 'AH', desc: 'Former MOH digital health advisor. 15+ years in healthcare systems.' },
-  { name: 'Brian Otieno', role: 'CTO & Co-Founder', bg: 'BO', desc: 'Ex-Andela engineer. Built health-tech platforms serving 2M+ users.' },
-  { name: 'Grace Wambui', role: 'Chief Product Officer', bg: 'GW', desc: 'Product lead at 2 successful health startups. Certified nurse informaticist.' },
-  { name: 'James Kariuki', role: 'Chief Revenue Officer', bg: 'JK', desc: 'Previously scaled SaaS to KES 200M ARR across East Africa.' },
+  { name: 'Michael Onyango', role: 'CEO & Co-Founder', bg: 'MO', desc: 'Former MOH digital health advisor. 15+ years in healthcare systems.' },
+  { name: 'Erik Mwangi', role: 'CTO & Co-Founder', bg: 'EM', desc: 'Ex-Andela engineer. Built health-tech platforms serving 2M+ users.' },
+  { name: 'Orioki Hyacinth onchangu', role: 'CMO', bg: 'OH', desc: 'Chief Marketing Officer driving Ehealth\'s growth strategy across Africa.' },
 ]
 
 const milestones = [
