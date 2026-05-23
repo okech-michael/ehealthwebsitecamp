@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Activity, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const navLinks = [
   { label: 'Features', href: '/features' },
@@ -35,11 +36,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-emerald-500 flex items-center justify-center shadow-glow-sm">
-              <Activity className="w-5 h-5 text-white" strokeWidth={2.5} />
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-brand-500 to-emerald-500 blur-md opacity-50 group-hover:opacity-80 transition-opacity" />
+            <div className="relative w-10 h-10">
+              <Image
+                src="/logo.png"
+                alt="E-health Logo"
+                width={40}
+                height={40}
+                className="object-contain"
+              />
             </div>
-            <span className="text-xl font-display font-bold tracking-tight text-white">
+            <span className="hidden sm:inline text-lg font-display font-bold tracking-tight text-white">
               E<span className="gradient-text">health</span>
             </span>
           </Link>
@@ -76,7 +82,6 @@ export default function Navbar() {
               className="relative px-5 py-2.5 rounded-xl text-sm font-semibold text-white overflow-hidden group"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-brand-500 to-emerald-500 transition-all duration-300 group-hover:opacity-90" />
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md bg-gradient-to-r from-brand-500 to-emerald-500" />
               <span className="relative">Request Demo</span>
             </Link>
           </div>

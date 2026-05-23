@@ -1,11 +1,11 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { TrendingUp, Eye, Zap, Clock, FileText, Users, Timer, Calendar, Heart } from 'lucide-react'
+import { TrendingUp, Eye, Zap, Clock, FileText, Users, Timer, Calendar, Heart, Building2, Stethoscope } from 'lucide-react'
 
 const benefitGroups = [
   {
     audience: 'Facility Owners',
-    emoji: '🏥',
+    icon: Building2,
     color: 'brand',
     description: 'Protect your revenue and gain complete operational control',
     benefits: [
@@ -17,7 +17,7 @@ const benefitGroups = [
   },
   {
     audience: 'Healthcare Staff',
-    emoji: '👩‍⚕️',
+    icon: Stethoscope,
     color: 'emerald',
     description: 'Spend less time on paperwork, more time on patients',
     benefits: [
@@ -29,7 +29,7 @@ const benefitGroups = [
   },
   {
     audience: 'Patients',
-    emoji: '👥',
+    icon: Users,
     color: 'purple',
     description: 'Better healthcare experience at every touchpoint',
     benefits: [
@@ -53,7 +53,6 @@ export default function BenefitsSection() {
   return (
     <section className="section-pad relative overflow-hidden" id="benefits">
       <div className="absolute inset-0 bg-gradient-to-b from-[#08142a] to-[#0a1628]" />
-      <div className="absolute bottom-0 left-1/3 w-[600px] h-[400px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -73,6 +72,7 @@ export default function BenefitsSection() {
         <div className="flex justify-center gap-2 mb-12 flex-wrap">
           {benefitGroups.map((group, i) => {
             const c = colorConfig[group.color]
+            const IconComp = group.icon
             return (
               <button
                 key={group.audience}
@@ -83,7 +83,7 @@ export default function BenefitsSection() {
                     : 'text-slate-400 border-white/10 hover:border-white/20 hover:text-white bg-white/3'
                   }`}
               >
-                <span>{group.emoji}</span>
+                <IconComp className="w-4 h-4" />
                 {group.audience}
               </button>
             )

@@ -50,8 +50,6 @@ export default function HomeVisitSection() {
   return (
     <section className="section-pad relative overflow-hidden" id="home-visit">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] to-[#070e1c]" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-500/6 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -108,7 +106,7 @@ export default function HomeVisitSection() {
 
             {/* Phone frame */}
             <div className="relative w-72">
-              <div className="glass rounded-[3rem] border border-brand-500/30 overflow-hidden shadow-glow-md">
+              <div className="glass rounded-[3rem] border border-brand-500/30 overflow-hidden">
                 {/* Status bar */}
                 <div className="bg-[#050c18] px-6 pt-4 pb-3 flex items-center justify-between">
                   <span className="text-[11px] text-white font-medium">9:41</span>
@@ -121,7 +119,7 @@ export default function HomeVisitSection() {
                 <div className="bg-[#070e1c] px-5 pb-6 space-y-4">
                   {/* App header */}
                   <div className="text-center mb-2">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-emerald-500 mx-auto flex items-center justify-center mb-2 shadow-glow-sm">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-500 to-emerald-500 mx-auto flex items-center justify-center mb-2">
                       <Activity className="w-6 h-6 text-white" />
                     </div>
                     <p className="text-[11px] text-slate-400">Ehealth Home Visit</p>
@@ -142,7 +140,7 @@ export default function HomeVisitSection() {
                     </svg>
                     {/* Medic marker */}
                     <div className="absolute top-[52%] left-[55%] -translate-x-1/2 -translate-y-1/2">
-                      <div className="w-8 h-8 rounded-full bg-brand-500 border-2 border-white flex items-center justify-center shadow-glow-sm animate-pulse-slow">
+                      <div className="w-8 h-8 rounded-full bg-brand-500 border-2 border-white flex items-center justify-center animate-pulse-slow">
                         <Activity className="w-3.5 h-3.5 text-white" />
                       </div>
                     </div>

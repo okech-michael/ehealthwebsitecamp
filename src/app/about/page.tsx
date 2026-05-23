@@ -17,9 +17,9 @@ const values = [
 ]
 
 const team = [
-  { name: 'Michael Onyango', role: 'CEO & Co-Founder', bg: 'MO', desc: 'Former MOH digital health advisor. 15+ years in healthcare systems.' },
-  { name: 'Erik Mwangi', role: 'CTO & Co-Founder', bg: 'EM', desc: 'Ex-Andela engineer. Built health-tech platforms serving 2M+ users.' },
-  { name: 'Orioki Hyacinth onchangu', role: 'CMO', bg: 'OH', desc: 'Chief Marketing Officer driving Ehealth\'s growth strategy across Africa.' },
+  { name: 'Michael Onyango', role: 'CEO & Co-Founder', bg: 'MO', desc: '2+ years of experience in healthcare technology and digital health innovation.' },
+  { name: 'Erik Mwangi', role: 'CTO & Co-Founder', bg: 'EM', desc: 'Worked at UBUNTU. Built health-tech platforms serving 2M+ users.' },
+  { name: 'Orioki Hyacinth onchangu', role: 'CMO', bg: 'OH', desc: 'Healthcare systems engineer driving Ehealth\'s growth strategy across Africa.' },
 ]
 
 const milestones = [

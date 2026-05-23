@@ -52,7 +52,6 @@ export default function AnalyticsSection() {
     <section className="section-pad relative overflow-hidden" id="analytics">
       <div className="absolute inset-0 bg-gradient-to-b from-[#070e1c] to-[#0a1628]" />
       <div className="absolute inset-0 grid-bg opacity-20" />
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-brand-500/6 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -69,7 +68,7 @@ export default function AnalyticsSection() {
         </div>
 
         {/* Dashboard wrapper */}
-        <div className="glass rounded-3xl border border-brand-500/20 overflow-hidden shadow-glow-sm">
+        <div className="glass rounded-3xl border border-brand-500/20 overflow-hidden">
           {/* Dashboard header */}
           <div className="bg-[#060e1b] px-6 py-4 flex items-center justify-between border-b border-white/5">
             <div className="flex items-center gap-4">

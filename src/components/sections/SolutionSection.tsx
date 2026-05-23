@@ -1,5 +1,5 @@
 'use client'
-import { CheckCircle2, ArrowRight, Layers, Wifi, FileText, CreditCard, Smartphone, BarChart3 } from 'lucide-react'
+import { CheckCircle2, ArrowRight, Layers, Wifi, FileText, CreditCard, Smartphone, BarChart3, Users, Smartphone as SmartphoneIcon, Pill, Stethoscope, Microscope, DollarSign } from 'lucide-react'
 
 const solutions = [
   {
@@ -41,19 +41,18 @@ const solutions = [
 ]
 
 const workflowSteps = [
-  { label: 'Patient Arrives', icon: '👤', color: 'brand' },
-  { label: 'Digital Registration', icon: '📱', color: 'emerald' },
-  { label: 'Triage & Vitals', icon: '💊', color: 'purple' },
-  { label: 'Doctor Consultation', icon: '🩺', color: 'brand' },
-  { label: 'Lab / Pharmacy', icon: '🔬', color: 'orange' },
-  { label: 'Smart Billing', icon: '💳', color: 'emerald' },
+  { label: 'Patient Arrives', icon: Users, color: 'brand' },
+  { label: 'Digital Registration', icon: SmartphoneIcon, color: 'emerald' },
+  { label: 'Triage & Vitals', icon: Pill, color: 'purple' },
+  { label: 'Doctor Consultation', icon: Stethoscope, color: 'brand' },
+  { label: 'Lab / Pharmacy', icon: Microscope, color: 'orange' },
+  { label: 'Smart Billing', icon: DollarSign, color: 'emerald' },
 ]
 
 export default function SolutionSection() {
   return (
     <section className="section-pad relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] to-[#08142a]" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-500/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -74,22 +73,25 @@ export default function SolutionSection() {
         {/* Workflow connector */}
         <div className="mb-16 overflow-x-auto pb-4">
           <div className="flex items-center justify-center gap-0 min-w-max mx-auto px-4">
-            {workflowSteps.map((step, i) => (
-              <div key={step.label} className="flex items-center">
-                <div className="flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-2xl glass border border-brand-500/20 flex items-center justify-center text-2xl shadow-card hover:scale-110 transition-transform cursor-default">
-                    {step.icon}
+            {workflowSteps.map((step, i) => {
+              const Icon = step.icon
+              return (
+                <div key={step.label} className="flex items-center">
+                  <div className="flex flex-col items-center">
+                    <div className="w-14 h-14 rounded-2xl glass border border-brand-500/20 flex items-center justify-center text-2xl shadow-card hover:scale-110 transition-transform cursor-default">
+                      <Icon className="w-6 h-6 text-slate-400" />
+                    </div>
+                    <span className="text-[11px] text-slate-400 mt-2 text-center leading-tight max-w-[70px]">{step.label}</span>
                   </div>
-                  <span className="text-[11px] text-slate-400 mt-2 text-center leading-tight max-w-[70px]">{step.label}</span>
+                  {i < workflowSteps.length - 1 && (
+                    <div className="flex items-center mx-2 mb-5">
+                      <div className="w-8 h-px bg-gradient-to-r from-brand-500/50 to-brand-500/20" />
+                      <div className="w-1.5 h-1.5 rotate-45 border-t border-r border-brand-500/50 -ml-1" />
+                    </div>
+                  )}
                 </div>
-                {i < workflowSteps.length - 1 && (
-                  <div className="flex items-center mx-2 mb-5">
-                    <div className="w-8 h-px bg-gradient-to-r from-brand-500/50 to-brand-500/20" />
-                    <div className="w-1.5 h-1.5 rotate-45 border-t border-r border-brand-500/50 -ml-1" />
-                  </div>
-                )}
-              </div>
-            ))}
+              )
+            })}
           </div>
           <div className="text-center mt-4">
             <span className="text-xs text-slate-500 font-mono">Fully digitised patient journey · Real-time updates at every step</span>

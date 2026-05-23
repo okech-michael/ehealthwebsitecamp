@@ -1,12 +1,18 @@
 This folder contains public assets for the Ehealth website.
 
-Add the following files here before production deployment:
+Status of required assets:
+✓ COMPLETE:
+- logo.png — Custom Ehealth logo (added - 160x50px recommended)
+
+TODO - Add the following before production deployment:
 - favicon.ico (32x32 or 64x64)
 - favicon-16x16.png
 - favicon-32x32.png
 - apple-touch-icon.png (180x180)
 - og-image.jpg (1200x630) — for Open Graph social sharing
-- logo.svg — vector Ehealth logo
-- logo-dark.svg — dark mode variant
 
-For now, Next.js will use default metadata. Replace this file with your actual assets.
+IMPROVEMENTS MADE:
+- All emoji icons replaced with lucide-react professional icons
+- Glowing blur effects removed/reduced throughout site
+- Custom logo integrated into navbar
+- Cleaner, more professional visual design

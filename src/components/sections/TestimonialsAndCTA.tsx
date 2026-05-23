@@ -42,7 +42,6 @@ export function TestimonialsSection() {
   return (
     <section className="section-pad relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] to-[#070e1c]" />
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-500/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Testimonials */}
@@ -111,10 +110,9 @@ export function CTASection() {
     <section className="section-pad relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#070e1c] to-[#0a1628]" />
       <div className="absolute inset-0 grid-bg opacity-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-brand-500/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="glass rounded-3xl border border-brand-500/20 p-10 lg:p-16 shadow-glow-sm">
+        <div className="glass rounded-3xl border border-brand-500/20 p-10 lg:p-16">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold mb-8">
             <div className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse" />

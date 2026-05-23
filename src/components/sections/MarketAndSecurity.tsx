@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { Shield, Lock, Eye, Server, UserCheck, FileCheck, Globe, TrendingUp } from 'lucide-react'
+import { Shield, Lock, Eye, Server, UserCheck, FileCheck, Globe, TrendingUp, Building2, Users, DollarSign, Target } from 'lucide-react'
 
 function useCountUp(target: number, duration: number = 2000, start: boolean = true) {
   const [count, setCount] = useState(0)
@@ -20,10 +20,10 @@ function useCountUp(target: number, duration: number = 2000, start: boolean = tr
 }
 
 const marketStats = [
-  { value: 12000, suffix: '+', label: 'Health Facilities in Kenya', icon: '🏥', color: 'brand' },
-  { value: 54, suffix: 'M+', label: 'Kenyan Population to Serve', icon: '👥', color: 'emerald' },
-  { value: 1400, suffix: 'M', label: 'East African Digital Health Market (USD)', icon: '💰', color: 'purple' },
-  { value: 97, suffix: '%', label: 'SHA/UHC Digital Transformation Target', icon: '🎯', color: 'orange' },
+  { value: 12000, suffix: '+', label: 'Health Facilities in Kenya', icon: Building2, color: 'brand' },
+  { value: 54, suffix: 'M+', label: 'Kenyan Population to Serve', icon: Users, color: 'emerald' },
+  { value: 1400, suffix: 'M', label: 'East African Digital Health Market (USD)', icon: DollarSign, color: 'purple' },
+  { value: 97, suffix: '%', label: 'SHA/UHC Digital Transformation Target', icon: Target, color: 'orange' },
 ]
 
 const securityFeatures = [
@@ -57,15 +57,20 @@ function CounterSection() {
 
   return (
     <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-      {marketStats.map((stat, i) => (
-        <div key={stat.label} className="glass rounded-2xl p-6 border border-white/5 text-center hover:-translate-y-1 transition-transform duration-300">
-          <div className="text-3xl mb-3">{stat.icon}</div>
-          <div className="font-display text-3xl lg:text-4xl font-bold text-white mb-1">
-            {values[i].toLocaleString()}{stat.suffix}
+      {marketStats.map((stat, i) => {
+        const IconComp = stat.icon
+        return (
+          <div key={stat.label} className="glass rounded-2xl p-6 border border-white/5 text-center hover:-translate-y-1 transition-transform duration-300">
+            <div className="mb-3 flex justify-center">
+              <IconComp className="w-8 h-8 text-slate-400" />
+            </div>
+            <div className="font-display text-3xl lg:text-4xl font-bold text-white mb-1">
+              {values[i].toLocaleString()}{stat.suffix}
+            </div>
+            <div className="text-xs text-slate-400 leading-relaxed">{stat.label}</div>
           </div>
-          <div className="text-xs text-slate-400 leading-relaxed">{stat.label}</div>
-        </div>
-      ))}
+        )
+      })}
     </div>
   )
 }
@@ -74,7 +79,6 @@ export function MarketSection() {
   return (
     <section className="section-pad relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] to-[#070e1c]" />
-      <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-brand-500/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">

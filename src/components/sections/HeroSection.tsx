@@ -73,11 +73,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 grid-bg opacity-60" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a1628]" />
 
-      {/* Glowing orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-brand-500/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/8 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-navy-700/30 rounded-full blur-[120px] pointer-events-none" />
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 lg:pt-36 lg:pb-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
@@ -220,7 +215,7 @@ export default function HeroSection() {
               })}
 
               {/* Central dashboard mockup */}
-              <div className="glass rounded-3xl border border-brand-500/20 overflow-hidden shadow-glow-sm">
+              <div className="glass rounded-3xl border border-brand-500/20 overflow-hidden">
                 {/* Dashboard header */}
                 <div className="bg-gradient-to-r from-brand-900/50 to-navy-800/50 px-5 py-4 flex items-center justify-between border-b border-white/5">
                   <div className="flex items-center gap-3">
