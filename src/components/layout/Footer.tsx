@@ -65,15 +65,15 @@ export default function Footer() {
             <div className="mt-6 space-y-3">
               <div className="flex items-center gap-3 text-sm text-slate-400">
                 <Mail className="w-4 h-4 text-brand-400 flex-shrink-0" />
-                <a href="mailto:hello@ehealth.africa" className="hover:text-white transition-colors">hello@ehealth.africa</a>
+                <a href="mailto:infor@terraseptsolutions.com" className="hover:text-white transition-colors">infor@terraseptsolutions.com</a>
               </div>
               <div className="flex items-center gap-3 text-sm text-slate-400">
                 <Phone className="w-4 h-4 text-brand-400 flex-shrink-0" />
-                <a href="tel:+254700000000" className="hover:text-white transition-colors">+254 700 000 000</a>
+                <a href="tel:0741145911" className="hover:text-white transition-colors">0741145911</a>
               </div>
               <div className="flex items-start gap-3 text-sm text-slate-400">
                 <MapPin className="w-4 h-4 text-brand-400 flex-shrink-0 mt-0.5" />
-                <span>Westlands, Nairobi, Kenya</span>
+                <span>Kisii, Kenya</span>
               </div>
             </div>
 

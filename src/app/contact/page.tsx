@@ -34,25 +34,11 @@ const contactOptions = [
 
 const offices = [
   {
-    city: 'Nairobi (HQ)',
-    address: 'Westlands Business Park, 4th Floor\nWestlands Road, Nairobi, Kenya',
-    phone: '+254 700 000 000',
-    email: 'nairobi@ehealth.africa',
+    city: 'Kisii (HQ)',
+    address: 'Kisii, Kenya',
+    phone: '0741145911',
+    email: 'infor@terraseptsolutions.com',
     flag: '🇰🇪',
-  },
-  {
-    city: 'Mombasa',
-    address: 'Nyali Centre, 2nd Floor\nLinks Road, Mombasa, Kenya',
-    phone: '+254 720 000 000',
-    email: 'mombasa@ehealth.africa',
-    flag: '🇰🇪',
-  },
-  {
-    city: 'Kampala',
-    address: 'Innovation Village, Nakawa\nKampala, Uganda',
-    phone: '+256 700 000 000',
-    email: 'kampala@ehealth.africa',
-    flag: '🇺🇬',
   },
 ]
 
@@ -105,7 +91,7 @@ export default function ContactPage() {
                   <h3 className="font-display font-bold text-white mb-2">{opt.title}</h3>
                   <p className="text-sm text-slate-400 leading-relaxed mb-5">{opt.desc}</p>
                   <a
-                    href="mailto:hello@ehealth.africa"
+                    href="mailto:infor@terraseptsolutions.com"
                     className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${c.split(' ')[0]} hover:opacity-80`}
                   >
                     {opt.action} <ArrowRight className="w-4 h-4" />
@@ -216,7 +202,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-xs text-slate-500">General enquiries</div>
-                      <a href="mailto:hello@ehealth.africa" className="text-sm text-white hover:text-brand-400 transition-colors">hello@ehealth.africa</a>
+                      <a href="mailto:infor@terraseptsolutions.com" className="text-sm text-white hover:text-brand-400 transition-colors">infor@terraseptsolutions.com</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -225,7 +211,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-xs text-slate-500">Sales hotline</div>
-                      <a href="tel:+254700000000" className="text-sm text-white hover:text-brand-400 transition-colors">+254 700 000 000</a>
+                      <a href="tel:0741145911" className="text-sm text-white hover:text-brand-400 transition-colors">0741145911</a>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
