@@ -1,14 +1,21 @@
+import { Suspense, lazy } from 'react'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import HeroSection from '@/components/sections/HeroSection'
 import ProblemSection from '@/components/sections/ProblemSection'
-import SolutionSection from '@/components/sections/SolutionSection'
-import ModulesSection from '@/components/sections/ModulesSection'
-import BenefitsSection from '@/components/sections/BenefitsSection'
-import HomeVisitSection from '@/components/sections/HomeVisitSection'
-import AnalyticsSection from '@/components/sections/AnalyticsSection'
-import { MarketSection, SecuritySection } from '@/components/sections/MarketAndSecurity'
-import { TestimonialsSection, CTASection } from '@/components/sections/TestimonialsAndCTA'
+
+// Lazy load heavy sections
+const SolutionSection = lazy(() => import('@/components/sections/SolutionSection'))
+const ModulesSection = lazy(() => import('@/components/sections/ModulesSection'))
+const BenefitsSection = lazy(() => import('@/components/sections/BenefitsSection'))
+const HomeVisitSection = lazy(() => import('@/components/sections/HomeVisitSection'))
+const AnalyticsSection = lazy(() => import('@/components/sections/AnalyticsSection'))
+const MarketAndSecuritySections = lazy(() => import('@/components/sections/MarketAndSecurityWrapper'))
+const TestimonialsAndCTASections = lazy(() => import('@/components/sections/TestimonialsAndCTAWrapper'))
+
+function SectionLoader() {
+  return <div className="min-h-screen bg-navy-900" />
+}
 
 export default function HomePage() {
   return (
@@ -16,15 +23,35 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <ProblemSection />
-      <SolutionSection />
-      <ModulesSection />
-      <BenefitsSection />
-      <HomeVisitSection />
-      <AnalyticsSection />
-      <MarketSection />
-      <SecuritySection />
-      <TestimonialsSection />
-      <CTASection />
+      
+      <Suspense fallback={<SectionLoader />}>
+        <SolutionSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <ModulesSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <BenefitsSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <HomeVisitSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <AnalyticsSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <MarketAndSecuritySections />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <TestimonialsAndCTASections />
+      </Suspense>
+
       <Footer />
     </main>
   )
