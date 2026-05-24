@@ -33,21 +33,18 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-start justify-between pt-2 lg:pt-3">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-48 h-48">
+            <div className="relative w-16 h-16">
               <Image
                 src="/logo.png"
                 alt="E-health Logo"
-                width={192}
-                height={192}
+                width={64}
+                height={64}
                 className="object-contain"
               />
             </div>
-            <span className="hidden sm:inline text-lg font-display font-bold tracking-tight text-white">
-              E<span className="gradient-text">health</span>
-            </span>
           </Link>
 
           {/* Desktop Nav */}
