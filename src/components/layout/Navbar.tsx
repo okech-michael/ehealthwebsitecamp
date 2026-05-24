@@ -33,15 +33,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-start justify-between pt-2 lg:pt-3">
+        <div className="flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-16 h-16">
+            <div className="relative w-20 h-20">
               <Image
                 src="/logo.png"
                 alt="E-health Logo"
-                width={64}
-                height={64}
+                width={80}
+                height={80}
                 className="object-contain"
               />
             </div>
