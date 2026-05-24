@@ -36,12 +36,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="relative w-10 h-10">
+            <div className="relative w-14 h-14">
               <Image
                 src="/logo.png"
                 alt="E-health Logo"
-                width={40}
-                height={40}
+                width={56}
+                height={56}
                 className="object-contain"
               />
             </div>
